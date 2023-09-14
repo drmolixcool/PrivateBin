@@ -5,5 +5,5 @@ jobs:
   Explore-Github-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Show folder"
-      - run: ls -l
+      - run: echo "Show path"
+      - run: pwd
