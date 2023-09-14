@@ -1,0 +1,9 @@
+name: PHPUnit
+run-name: ${{ github.actor }} is testing out Github Actions
+on: [push]
+jobs:
+  Explore-Github-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Launch test
+      - run: make test
