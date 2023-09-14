@@ -11,7 +11,4 @@ jobs:
           extensions: sqlite, sqlite3, mbstring, zip, xml, gd, dom
       - run: sudo apt install php8.2-gd
       - uses: php-actions/composer@v6
-      - run: php -v
-      - uses: php-actions/phpunit@v3
-        with:
-          version: 9.6.11
+      - run: make test
