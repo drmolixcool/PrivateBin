@@ -10,7 +10,5 @@ jobs:
         with:
           extensions: sqlite, sqlite3, mbstring, zip, xml, gd, dom
       - uses: php-actions/composer@v6
-      - uses: php-actions/phpunit@v3
-        with:
-          version: 9.6.11
-          php_extensions: sqlite, sqlite3, mbstring, zip, xml, gd, dom
+      - run: ./vendor/bin/phpunit --coverage-clover coverage.clover.xml tst
+      - run: cat coverage.clover.xml
