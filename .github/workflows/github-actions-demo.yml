@@ -12,3 +12,5 @@ jobs:
       - run: sudo apt install php-gd
       - uses: php-actions/composer@v6
       - uses: php-actions/phpunit@v3
+        with:
+          version: 9.6.11
