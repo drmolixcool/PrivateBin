@@ -9,6 +9,8 @@ jobs:
       - uses: shivammathur/setup-php@v2
         with:
           extensions: sqlite, sqlite3, mbstring, zip, xml, gd, dom
-      - run: sudo apt install php8.2-gd
       - uses: php-actions/composer@v6
-      - run: make test
+      - uses: php-actions/phpunit@v3
+        with:
+          version: 9.6.11
+          php_extensions: sqlite, sqlite3, mbstring, zip, xml, gd, dom
