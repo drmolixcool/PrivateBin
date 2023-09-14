@@ -10,7 +10,7 @@ jobs:
         with:
           extensions: sqlite, sqlite3, mbstring, zip, xml, gd, dom
       - uses: php-actions/composer@v6
-      - run: ./vendor/bin/phpunit
+      - run: ./vendor/bin/phpunit --coverage-cobertura=log/coverage.cobertura.xml
       - name: Code Coverage Summary Report
         uses: irongut/CodeCoverageSummary@v1.3.0
         with:
