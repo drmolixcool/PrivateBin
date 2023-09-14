@@ -9,5 +9,6 @@ jobs:
       - uses: shivammathur/setup-php@v2
         with:
           extensions: sqlite3, mbstring, zip, xml, gd, dom
+      - run: sudo apt install php-gd
       - uses: php-actions/composer@v6
       - uses: php-actions/phpunit@v3
