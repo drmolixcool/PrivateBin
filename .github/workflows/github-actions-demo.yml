@@ -7,7 +7,7 @@ jobs:
     permissions:
       pull-requests: write
     steps:
-      - uses: actions/checkout@v'
+      - uses: actions/checkout@v4
       - uses: shivammathur/setup-php@v2
         with:
           extensions: sqlite, sqlite3, mbstring, zip, xml, gd, dom
