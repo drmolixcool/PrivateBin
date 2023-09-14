@@ -5,6 +5,7 @@ jobs:
   Explore-Github-Actions:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - uses: php-actions/composer@v6
       - uses: php-actions/phpunit@v3
       - run: echo "Show path"
