@@ -10,5 +10,8 @@ jobs:
         with:
           extensions: sqlite, sqlite3, mbstring, zip, xml, gd, dom
       - uses: php-actions/composer@v6
-      - run: ./vendor/bin/phpunit --coverage-clover coverage.clover.xml tst
-      - run: cat coverage.clover.xml
+      - run: ./vendor/bin/phpunit --coverage-cobertura coverage.cobertura.xml tst
+      - name: Code Coverage Summary Report
+        uses: irongut/CodeCoverageSummary@v1.3.0
+        with:
+          filename: coverage.cobertura.xml
