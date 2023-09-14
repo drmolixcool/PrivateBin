@@ -5,5 +5,5 @@ jobs:
   Explore-Github-Actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Launch test
+      - run: echo "Launch test"
       - run: make test
