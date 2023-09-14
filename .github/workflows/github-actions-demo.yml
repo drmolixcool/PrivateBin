@@ -4,8 +4,10 @@ on: [push]
 jobs:
   Explore-Github-Actions:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v'
       - uses: shivammathur/setup-php@v2
         with:
           extensions: sqlite, sqlite3, mbstring, zip, xml, gd, dom
