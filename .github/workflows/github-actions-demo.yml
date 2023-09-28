@@ -25,16 +25,16 @@ jobs:
           indicators: true
           output: file
           thresholds: '60 80'
-      - name: PHP Code Sniffer
-        uses: php-actions/phpcs@v1
-        with:
-          path: lib/
-          standard: phpcs.xml
+      - name: Adding markdown
+        run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
       - name: PHP Mess Detector
         uses: php-actions/phpmd@v1
         with:
           path: lib/
           output: text
           ruleset: phpmd.xml
-      - name: Adding markdown
-        run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
+      - name: PHP Code Sniffer
+        uses: php-actions/phpcs@v1
+        with:
+          path: lib/
+          standard: phpcs.xml
