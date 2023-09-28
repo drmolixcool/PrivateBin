@@ -26,7 +26,7 @@ jobs:
           output: file
           thresholds: '60 80'
       - name: PHP CS Fixer
-        uses: StephaneBour/actions-php-cs-fixer@1.0
+        uses: StephaneBour/actions-php-cs-fixer@8.2
         with:
           dir: './lib'
       - name: PHP Code Sniffer
