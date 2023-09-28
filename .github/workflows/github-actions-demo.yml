@@ -30,5 +30,11 @@ jobs:
         with:
           path: lib/
           standard: phpcs.xml
+      - name: PHP Mess Detector
+        uses: php-actions/phpmd@v1
+        with:
+          path: lib/
+          output: text
+          ruleset: phpmd.xml
       - name: Adding markdown
         run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
