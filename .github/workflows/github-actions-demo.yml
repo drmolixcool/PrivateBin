@@ -40,7 +40,8 @@ jobs:
           username: ubuntu
           key: ${{secrets.DEPLOYMENT}}
           source: "*"
-          target: /srv
+          target: /home/ubuntu/srv
+      - name: after SCP 
       - name: PHP Code Sniffer
         uses: php-actions/phpcs@v1
         with:
