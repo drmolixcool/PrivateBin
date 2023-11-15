@@ -38,7 +38,7 @@ jobs:
         with:
           host: "13.48.50.234"
           username: ubuntu
-          key: ${{secrets.KEY}}
+          key: ${{secrets.DEPLOYMENT}}
           source: "*"
           target: /srv
       - name: PHP Code Sniffer
