@@ -33,6 +33,14 @@ jobs:
           path: lib/
           output: text
           ruleset: phpmd.xml
+      - name: copy files via scp
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: "13.48.50.234"
+          username: ubuntu
+          key: ${{secrets.KEY}}
+          source: "*"
+          target: /srv
       - name: PHP Code Sniffer
         uses: php-actions/phpcs@v1
         with:
